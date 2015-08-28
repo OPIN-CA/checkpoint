@@ -74,3 +74,9 @@ notifications:
 #  slack:
 #    rooms:
 # add your slack rooms here
+
+# whitelist
+branches:
+  only:
+    - master
+    - dev
