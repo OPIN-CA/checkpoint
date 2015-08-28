@@ -68,7 +68,7 @@ script:
   - drush site-install -y --db-url=mysql://root@127.0.0.1/travisdb --db-su='root' --db-su-pw=''
   # @todo put the other stuff here to build but this should give us a site
   - drush en simpletest_example -y
-  - drush --uri=http://localhost test-run Example
+  - drush --uri=http://localhost test-run Examples
   # cd /var/www/drupal/sites/all/modules
 after_script:
   - drush status
