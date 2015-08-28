@@ -51,7 +51,9 @@ before_script:
   # establish drupal package put in place the right way
   - sudo mkdir -p /var/www
   - sudo chown travis:travis /var/www
-  - drush dl drupal --destination=/var/www --default-major=7 --drupal-project-rename=drupal --y
+  # drush dl drupal --destination=/var/www --default-major=7 --drupal-project-rename=drupal --y
+  # git checkout
+  - ls -lah
   # get drush recipes setup functions
   - sudo mkdir -p ~/.drush
   - sudo chown -R travis:travis ~/.drush
