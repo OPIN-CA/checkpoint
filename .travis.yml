@@ -51,7 +51,9 @@ before_script:
   # establish drupal package put in place the right way
   - sudo mkdir -p /var/www
   - sudo chown travis:travis /var/www
-  - drush dl drupal --destination=/var/www --default-major=7 --drupal-project-rename=drupal --y
+  # drush dl drupal --destination=/var/www --default-major=7 --drupal-project-rename=drupal --y
+  # git checkout
+  - cp -a ./ /var/www/
   # get drush recipes setup functions
   - sudo mkdir -p ~/.drush
   - sudo chown -R travis:travis ~/.drush
@@ -62,10 +64,13 @@ before_script:
 
 script:
   # stand up drupal
-  - cd /var/www/drupal
+  - cd /var/www/
   - drush site-install -y --db-url=mysql://root@127.0.0.1/travisdb --db-su='root' --db-su-pw=''
   # @todo put the other stuff here to build but this should give us a site
-  - cd /var/www/drupal/sites/all/modules
+  - drush en simpletest_example -y
+  - drush cc all
+  - drush --uri=http://localhost test-run Examples
+  # cd /var/www/drupal/sites/all/modules
 after_script:
   - drush status
 
