@@ -1,0 +1,24 @@
+[submodule "sites/all/modules/features/common"]
+	path = sites/all/modules/features/common
+	url = https://github.com/OPIN-INTRANET/common.git
+[submodule "sites/all/modules/features/research"]
+	path = sites/all/modules/features/research
+	url = https://github.com/OPIN-INTRANET/research.git
+[submodule "sites/all/modules/features/sales"]
+	path = sites/all/modules/features/sales
+	url = https://github.com/OPIN-INTRANET/sales.git
+[submodule "sites/all/modules/features/team_members"]
+	path = sites/all/modules/features/team_members
+	url = https://github.com/OPIN-INTRANET/team_members.git
+[submodule "sites/all/modules/features/projects"]
+	path = sites/all/modules/features/projects
+	url = https://github.com/OPIN-INTRANET/projects.git
+[submodule "sites/all/modules/features/contracts"]
+	path = sites/all/modules/features/contracts
+	url = https://github.com/OPIN-INTRANET/contracts.git
+[submodule "sites/all/modules/features/finance"]
+	path = sites/all/modules/features/finance
+	url = https://github.com/OPIN-INTRANET/finance.git
+[submodule "sites/all/modules/features/clients"]
+	path = sites/all/modules/features/clients
+	url = https://github.com/OPIN-INTRANET/clients.git
